@@ -66,6 +66,16 @@ Default configuration uses an H2 file-based database stored in `./data/productdb
 
 The project includes a `render.yaml` for easy deployment to Render.
 
+## Docker
+
+```bash
+# Build image
+docker build -t product-jpa .
+
+# Run container
+docker run -p 8083:8083 -v $(pwd)/data:/app/data -v $(pwd)/uploads:/app/uploads product-jpa
+```
+
 ## Build
 
 ```bash
