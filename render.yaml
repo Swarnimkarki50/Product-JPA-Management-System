@@ -1,12 +1,29 @@
 services:
   - type: web
     name: product-jpa
-    env: docker
+    runtime: docker
+    plan: free
     dockerfilePath: ./Dockerfile
-    envVars:
-      - key: PORT
-        value: 8083
-      - key: SPRING_PROFILES_ACTIVE
-        value: render
     healthCheckPath: /
     autoDeploy: true
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: render
+      - key: PORT
+        value: 8083
+      - key: DATABASE_URL
+        fromDatabase:
+          name: product-jpa-db
+          property: connectionString
+      - key: PGUSER
+        fromDatabase:
+          name: product-jpa-db
+          property: user
+      - key: PGPASSWORD
+        fromDatabase:
+          name: product-jpa-db
+          property: password
+
+databases:
+  - name: product-jpa-db
+    plan: free
