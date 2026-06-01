@@ -1,0 +1,11 @@
+.git
+.gitignore
+.gradle
+build
+data
+uploads
+*.log
+*.md
+.idea
+*.out.log
+*.err.log
