@@ -1,5 +1,7 @@
 # Product JPA Management System
 
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge)](https://product-jpa-management-system.onrender.com)
+
 A Spring Boot web application for managing product inventory with JPA, Thymeleaf, and file upload support.
 
 ## Tech Stack
@@ -59,6 +61,10 @@ A Spring Boot web application for managing product inventory with JPA, Thymeleaf
 ## Configuration
 
 Default configuration uses an H2 file-based database stored in `./data/productdb`. For production, set the `spring.profiles.active=render` to use PostgreSQL.
+
+## Live Demo
+
+The app is live at: [https://product-jpa-management-system.onrender.com](https://product-jpa-management-system.onrender.com)
 
 ## Deploy to Render
 
