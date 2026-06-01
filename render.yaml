@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: product-jpa
+    env: java
+    buildCommand: ./gradlew clean bootJar -x test
+    startCommand: java -jar build/libs/productjpa-0.0.1-SNAPSHOT.jar --spring.profiles.active=render
+    envVars:
+      - key: PORT
+        value: 8083
+      - key: SPRING_PROFILES_ACTIVE
+        value: render
+    healthCheckPath: /
+    autoDeploy: true

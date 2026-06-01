@@ -58,13 +58,13 @@ A Spring Boot web application for managing product inventory with JPA, Thymeleaf
 
 ## Configuration
 
-Default configuration uses an H2 file-based database stored in `./data/productdb`. For production, set the `spring.profiles.active=railway` to use PostgreSQL.
+Default configuration uses an H2 file-based database stored in `./data/productdb`. For production, set the `spring.profiles.active=render` to use PostgreSQL.
 
-## Deploy to Railway
+## Deploy to Render
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/...)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
-The project includes a `railway.json` for easy deployment to Railway.
+The project includes a `render.yaml` for easy deployment to Render.
 
 ## Build
 
